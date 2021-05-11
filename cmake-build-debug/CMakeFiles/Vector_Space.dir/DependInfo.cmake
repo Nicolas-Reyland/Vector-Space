@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Nicolas/CLionProjects/Vector Space/main.cpp" "C:/Users/Nicolas/CLionProjects/Vector Space/cmake-build-debug/CMakeFiles/Vector_Space.dir/main.cpp.obj"
+  "C:/Users/Nicolas/CLionProjects/Vector-Space/main.cpp" "C:/Users/Nicolas/CLionProjects/Vector-Space/cmake-build-debug/CMakeFiles/Vector_Space.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

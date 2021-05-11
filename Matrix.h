@@ -45,7 +45,6 @@ class Matrix {
             Matrix Id(n);
             for (int i = 0; i < n; i++) {
                 Id[i].values[i] = 1;
-                std::cout << "Id: " << Id[i].values[i] << std::endl;
             }
             return Id;
         }

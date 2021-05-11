@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Nicolas/CLionProjects/Vector Space/Matrix.h
+C:/Users/Nicolas/CLionProjects/Vector-Space/Matrix.h
 Vector.h
-C:/Users/Nicolas/CLionProjects/Vector Space/Vector.h
+C:/Users/Nicolas/CLionProjects/Vector-Space/Vector.h
 string
 -
 sstream
 -
 
-C:/Users/Nicolas/CLionProjects/Vector Space/Vector.h
+C:/Users/Nicolas/CLionProjects/Vector-Space/Vector.h
 string
 -
 vector
@@ -22,15 +22,15 @@ vector
 cmath
 -
 VectorSpaceException.h
-C:/Users/Nicolas/CLionProjects/Vector Space/VectorSpaceException.h
+C:/Users/Nicolas/CLionProjects/Vector-Space/VectorSpaceException.h
 
-C:/Users/Nicolas/CLionProjects/Vector Space/VectorSpace.h
+C:/Users/Nicolas/CLionProjects/Vector-Space/VectorSpace.h
 Vector.h
-C:/Users/Nicolas/CLionProjects/Vector Space/Vector.h
+C:/Users/Nicolas/CLionProjects/Vector-Space/Vector.h
 Matrix.h
-C:/Users/Nicolas/CLionProjects/Vector Space/Matrix.h
+C:/Users/Nicolas/CLionProjects/Vector-Space/Matrix.h
 
-C:/Users/Nicolas/CLionProjects/Vector Space/VectorSpaceException.h
+C:/Users/Nicolas/CLionProjects/Vector-Space/VectorSpaceException.h
 iostream
 -
 string
@@ -38,9 +38,9 @@ string
 exception
 -
 
-C:/Users/Nicolas/CLionProjects/Vector Space/main.cpp
+C:/Users/Nicolas/CLionProjects/Vector-Space/main.cpp
 iostream
 -
 VectorSpace.h
-C:/Users/Nicolas/CLionProjects/Vector Space/VectorSpace.h
+C:/Users/Nicolas/CLionProjects/Vector-Space/VectorSpace.h
 
