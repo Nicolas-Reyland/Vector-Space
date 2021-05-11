@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Nicolas/CLionProjects/Vector Space/Matrix.h
+Vector.h
+C:/Users/Nicolas/CLionProjects/Vector Space/Vector.h
+string
+-
+sstream
+-
+
+C:/Users/Nicolas/CLionProjects/Vector Space/Vector.h
+string
+-
+vector
+-
+cmath
+-
+VectorSpaceException.h
+C:/Users/Nicolas/CLionProjects/Vector Space/VectorSpaceException.h
+
+C:/Users/Nicolas/CLionProjects/Vector Space/VectorSpace.h
+Vector.h
+C:/Users/Nicolas/CLionProjects/Vector Space/Vector.h
+Matrix.h
+C:/Users/Nicolas/CLionProjects/Vector Space/Matrix.h
+
+C:/Users/Nicolas/CLionProjects/Vector Space/VectorSpaceException.h
+iostream
+-
+string
+-
+exception
+-
+
+C:/Users/Nicolas/CLionProjects/Vector Space/main.cpp
+iostream
+-
+VectorSpace.h
+C:/Users/Nicolas/CLionProjects/Vector Space/VectorSpace.h
+
