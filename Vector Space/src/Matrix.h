@@ -116,7 +116,7 @@ namespace VS
         }
         unsigned int rank(bool force_calculation = false)
         {
-            if (!force_calculation && !m_RankCalculated) return m_Rank;
+            if (!force_calculation && m_RankCalculated) return m_Rank;
             Matrix M2 = transpose();
             std::vector<std::vector<double>> vect_vect = M2.convert_to_std_vect();
             m_Rank = rankOfMatrix(vect_vect, M2.rows, M2.columns);
@@ -193,7 +193,7 @@ namespace VS
         //
         Eigen::MatrixXd m_Matrix;
         unsigned int m_Rank;
-        bool m_RankCalculated;
+        bool m_RankCalculated = false;
         //
         static Eigen::MatrixXd pow_(const Eigen::MatrixXd& M, const unsigned int n)
         {
