@@ -15,6 +15,9 @@ const double EPSILON = 1.0e-14;
 
 namespace VS
 {
+    unsigned int rankOfMatrix(std::vector<std::vector<double>> mat, int rows, int columns);
+    void swap(std::vector<std::vector<double>> mat, int row1, int row2, int col);
+
     class Matrix {
     public:
         // - Attributes -
@@ -111,6 +114,15 @@ namespace VS
 
             return vect_vect;
         }
+        unsigned int rank(bool force_calculation = false)
+        {
+            if (!force_calculation && !m_RankCalculated) return m_Rank;
+            Matrix M2 = transpose();
+            std::vector<std::vector<double>> vect_vect = M2.convert_to_std_vect();
+            m_Rank = rankOfMatrix(vect_vect, M2.rows, M2.columns);
+            m_RankCalculated = true;
+            return m_Rank;
+        }
 
         // - Operator Overloading -
         // + operator (Matrix only)
@@ -158,6 +170,15 @@ namespace VS
         Vector operator[](unsigned int index) {
             return Vector(m_Matrix.col(index));
         }
+        // = operator
+        Matrix& operator=(Matrix other) {
+            m_Matrix = Eigen::MatrixXd(other.m_Matrix);
+            columns = other.columns;
+            rows = other.rows;
+            m_Rank = other.m_Rank;
+            m_RankCalculated = other.m_RankCalculated;
+            return *this;
+        };
 
         // - Extras -
         std::string string_repr() {
@@ -171,6 +192,8 @@ namespace VS
     private:
         //
         Eigen::MatrixXd m_Matrix;
+        unsigned int m_Rank;
+        bool m_RankCalculated;
         //
         static Eigen::MatrixXd pow_(const Eigen::MatrixXd& M, const unsigned int n)
         {

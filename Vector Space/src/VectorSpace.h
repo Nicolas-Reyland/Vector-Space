@@ -13,21 +13,19 @@ namespace VS
     class VectorSpace {
     private:
         std::vector<Vector> m_Base;
+        Matrix m_M;
         bool m_Null;
-
-        std::vector<Vector> reduce_base(std::vector<Vector> base)
-        {
-            //
-        }
     public:
         // - Attributes -
-        unsigned int dimension;
-        unsigned int vect_size;
+        unsigned int dimension; // e.g. = 2 in a plane, even if the plane is in R^3
+        unsigned int vect_size; // e.g. = 3 in a plane, when the plane is in R^3
         // - Constructors -
         VectorSpace() {};
         VectorSpace(std::vector<Vector> base)
-            : m_Base(base), dimension(base.size())
         {
+            m_Base = base;
+            m_M = VS::Matrix(m_Base);
+            dimension = m_M.rank();
             if (dimension > 0) {
                 vect_size = base[0].num_elements;
                 m_Null = false;
@@ -52,6 +50,9 @@ namespace VS
             return VectorSpace(base);
         }
         bool isNull() { return m_Null; }
+        unsigned int rank() {
+            return m_M.rank();
+        }
     };
 }
 

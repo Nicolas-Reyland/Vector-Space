@@ -19,7 +19,6 @@ namespace VS
         Matrix M;
         VectorSpace E;
         VectorSpace F;
-        int rank; // rang
         // - Constructors -
         LinearMap() {
             //
@@ -33,13 +32,14 @@ namespace VS
             //
         }
         // - Methods -
-        int CalculateRank();
+        unsigned int rank() {
+            return M.rank();
+        }
 
         // - Operator Overloading -
         Vector operator()(Vector u) {
             return M * u;
         }
-
     };
 
     class Endomorphism : public LinearMap { // Endomorphisme
@@ -84,6 +84,11 @@ namespace VS
             M *= inverse_P;
             // return the corresponding linear map
             return Projection(M, space);
+        }
+
+        static Projection SpaceToPlaneProjection(VectorSpace space, VectorSpace plane, Vector projection_axes)
+        {
+            unsigned int plane_rank = plane.rank();
         }
     };
 }

@@ -1,26 +1,16 @@
 
-#include "LinearMap.h"
+#include "Matrix.h"
 
 namespace VS
 {
-    void swap(std::vector<std::vector<double>> mat, int row1, int row2, int col);
-    int rankOfMatrix(std::vector<std::vector<double>> mat, int rows, int columns);
-
-	int LinearMap::CalculateRank()
-	{
-        Matrix M2 = M.transpose();
-		std::vector<std::vector<double>> vect_vect = M2.convert_to_std_vect();
-        return rankOfMatrix(vect_vect, M2.rows, M2.columns);
-	}
-
     // source: https://www.geeksforgeeks.org/program-for-rank-of-matrix/
 
     /* function for finding rank of matrix */
-    int rankOfMatrix(std::vector<std::vector<double>> mat, int rows, int columns)
+    unsigned int rankOfMatrix(std::vector<std::vector<double>> mat, int rows, int columns)
     {
-        int rank = columns;
+        unsigned int rank = columns;
 
-        for (int row = 0; row < rank; row++)
+        for (unsigned int row = 0; row < rank; row++)
         {
             // Before we visit current row 'row', we make
             // sure that mat[row][0],....mat[row][row-1]
@@ -37,7 +27,7 @@ namespace VS
                         // column as 0 except entry 'mat[row][row]'
                         double mult = (double)mat[col][row] /
                             mat[row][row];
-                        for (int i = 0; i < rank; i++)
+                        for (unsigned int i = 0; i < rank; i++)
                             mat[col][i] -= mult * mat[row][i];
                     }
                 }

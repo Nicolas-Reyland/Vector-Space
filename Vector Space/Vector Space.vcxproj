@@ -152,8 +152,8 @@
     <ClInclude Include="src\VectorSpaceException.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\LinearMap.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Matrix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\README.md" />
