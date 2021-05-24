@@ -34,3 +34,8 @@
 # Clion Files
 .idea
 Testing
+
+# My Own
+.vs
+Debug
+
