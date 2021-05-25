@@ -1,6 +1,7 @@
 #include <iostream>
-#include "VectorSpace.h"
-#include "LinearMap.h"
+#include "VectorSpace/VectorSpace.h"
+#include "VectorSpace/LinearMap.h"
+#include "Graphics/Renderer.h"
 
 int main() {
 
@@ -12,12 +13,10 @@ int main() {
         VS::Vector::from_std_vector({0,1,1}),
         VS::Vector::from_std_vector({-1,-1,1}));
 
-    proj.M.print();
-
     VS::Vector vect = VS::Vector::from_std_vector({ 0,0,23 });
     VS::Vector projected = proj(vect);
 
-    std::cout << proj.M.rank() << std::endl;
+    projected.print();
 
     return 0;
 }

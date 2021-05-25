@@ -116,13 +116,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Vector Space\Dependencies\Eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Vector Space\Dependencies\Eigen;$(SolutionDir)Vector Space\Dependencies\numpy;$(SolutionDir)Vector Space\Vector Space;C:\Users\Nicolas\AppData\Local\Programs\Python\Python39\include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Vector Space\Dependencies\CBlas;$(SolutionDir)Vector Space\Dependencies\Eigen</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CBLAS.lib;liblapack.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Vector Space\Dependencies\CBlas;$(SolutionDir)Vector Space\Dependencies\Matplotlib;C:\Users\Nicolas\AppData\Local\Programs\Python\Python39\include</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CBLAS.lib;liblapack.lib;python3.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -133,30 +133,33 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Vector Space\Dependencies\Eigen</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Vector Space\Dependencies\Eigen;$(SolutionDir)Vector Space\Dependencies\numpy;$(SolutionDir)Vector Space\Vector Space;C:\Users\Nicolas\AppData\Local\Programs\Python\Python39\include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Vector Space\Dependencies\CBlas;$(SolutionDir)Vector Space\Dependencies\Eigen</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CBLAS.lib;liblapack.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Vector Space\Dependencies\CBlas;$(SolutionDir)Vector Space\Dependencies\Matplotlib;C:\Users\Nicolas\AppData\Local\Programs\Python\Python39\include</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CBLAS.lib;liblapack.lib;python3.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\LinearMap.h" />
-    <ClInclude Include="src\Matrix.h" />
-    <ClInclude Include="src\Vector.h" />
-    <ClInclude Include="src\VectorSpace.h" />
-    <ClInclude Include="src\VectorSpaceException.h" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="src\Graphics\Renderer.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Matrix.cpp" />
+    <ClCompile Include="src\VectorSpace\Matrix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\vendor\matplotlibcpp.h" />
+    <ClInclude Include="src\Graphics\Renderer.h" />
+    <ClInclude Include="src\VectorSpace\LinearMap.h" />
+    <ClInclude Include="src\VectorSpace\Matrix.h" />
+    <ClInclude Include="src\VectorSpace\Vector.h" />
+    <ClInclude Include="src\VectorSpace\VectorSpace.h" />
+    <ClInclude Include="src\VectorSpace\VectorSpaceException.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
